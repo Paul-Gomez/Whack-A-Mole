@@ -1,0 +1,128 @@
+:root {
+    --verde-fondo: #cfe8b0;
+    --verde-colina: #b9d996;
+    --verde-boton: #4fa33a;
+    --verde-oscuro: #2f6b22;
+    --crema: #fff6e0;
+    --marron: #5a3a22;
+    --gris-texto: #7a6a58;
+    --rojo: #c0392b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    color: var(--marron);
+    background: var(--verde-fondo);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* colinas decorativas del fondo */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    bottom: -140px;
+    height: 300px;
+    background: var(--verde-colina);
+    border-radius: 50%;
+    z-index: 0;
+}
+body::before { left: -120px; width: 700px; }
+body::after  { right: -150px; width: 800px; bottom: -170px; }
+
+.pantalla {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 16px;
+}
+
+.titulo {
+    margin: 0 0 32px;
+    font-size: 2.75rem;
+    letter-spacing: 1px;
+}
+
+.tarjeta {
+    width: 100%;
+    background: var(--crema);
+    border: 3px solid var(--marron);
+    border-radius: 28px;
+    padding: 28px 40px 36px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+.tarjeta-login { max-width: 460px; }
+
+label {
+    display: block;
+    margin: 14px 0 6px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    font-size: 1.1rem;
+    color: var(--marron);
+    background: #fff;
+    border: 3px solid var(--marron);
+    border-radius: 12px;
+}
+
+input:focus {
+    outline: 3px solid var(--verde-boton);
+    outline-offset: 1px;
+}
+
+input.invalido { border-color: var(--rojo); }
+
+.mensaje-error {
+    min-height: 1.4em;
+    margin: 14px 0 6px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--rojo);
+}
+
+.boton {
+    display: block;
+    margin: 12px auto 0;
+    min-width: 200px;
+    height: 54px;
+    padding: 0 24px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    border-radius: 16px;
+    border: 3px solid var(--marron);
+    cursor: pointer;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.boton-primario {
+    color: #fff;
+    background: var(--verde-boton);
+    border-color: var(--verde-oscuro);
+}
+.boton-primario:hover { filter: brightness(1.08); }
+
+.boton-secundario {
+    color: var(--marron);
+    background: var(--crema);
+}
