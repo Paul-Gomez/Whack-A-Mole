@@ -126,3 +126,42 @@ input.invalido { border-color: var(--rojo); }
     color: var(--marron);
     background: var(--crema);
 }
+
+/* Bienvenida */
+.tarjeta-ancha { max-width: 940px; }
+
+.instrucciones {
+    padding: 20px 28px;
+    background: #fff;
+    border: 3px solid var(--marron);
+    border-radius: 16px;
+}
+.instrucciones h3 { margin: 0 0 10px; font-size: 1.2rem; }
+.instrucciones ul { margin: 0; padding-left: 22px; line-height: 1.9; }
+
+.selector-nivel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+.selector-nivel label { margin: 0; font-size: 1.35rem; }
+
+select {
+    width: 320px;
+    height: 52px;
+    padding: 0 14px;
+    font-size: 1.15rem;
+    color: var(--marron);
+    background: #fff;
+    border: 3px solid var(--marron);
+    border-radius: 12px;
+}
+select:focus { outline: 3px solid var(--verde-boton); outline-offset: 1px; }
+
+.descripcion-nivel {
+    margin: 14px 0 6px;
+    text-align: center;
+    color: var(--gris-texto);
+}

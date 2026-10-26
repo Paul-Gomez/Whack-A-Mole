@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whac-A-Mole · Bienvenida</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main class="pantalla">
+        <h1 class="titulo">WHAC-A-MOLE</h1>
+
+        <section class="tarjeta tarjeta-ancha">
+            <h2>¡Hola, <span id="nombreUsuario"></span>!</h2>
+
+            <div class="instrucciones">
+                <h3>Instrucciones: tienes 30 segundos</h3>
+                <ul>
+                    <li>Golpea los topos marrones: +1 punto. Los dorados valen +3.</li>
+                    <li>Cuidado con las bombas: −3 puntos. Clic derecho para desactivarlas.</li>
+                    <li>Fallar en un agujero vacío: −1 punto.</li>
+                    <li>Barra espaciadora: congela a los topos 3 s (una vez por partida).</li>
+                </ul>
+            </div>
+
+            <div class="selector-nivel">
+                <label for="nivel">Nivel:</label>
+                <select id="nivel" name="nivel">
+                    <option value="principiante">Principiante</option>
+                    <option value="intermedio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
+                </select>
+            </div>
+
+            <p id="descripcionNivel" class="descripcion-nivel"></p>
+
+            <button type="button" id="botonJugar" class="boton boton-primario">Jugar</button>
+        </section>
+    </main>
+
+    <script type="module" src="js/paginas/bienvenida.js"></script>
+</body>
+</html>

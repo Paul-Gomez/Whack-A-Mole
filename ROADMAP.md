@@ -16,11 +16,11 @@ Se avanza paso a paso. Cada paso se prueba antes de pasar al siguiente. Marca co
 - [x] Probado en el navegador (campos vacíos, símbolos, credenciales erróneas, acceso correcto).
 
 ## Fase 2 · Bienvenida (Ejercicio 2)
-- [ ] `bienvenida.html` con saludo al usuario activo, instrucciones y botón «Jugar».
-- [ ] Selector de nivel (principiante / intermedio / avanzado) con descripción del nivel.
-- [ ] Guardar el nivel en `sessionStorage` y redirigir a Juego.
-- [ ] Proteger la página: si no hay usuario activo, volver al inicio de sesión.
-- [ ] Definir la configuración de niveles en un solo módulo (`js/servicios/niveles.js`).
+- [x] `bienvenida.html` con saludo al usuario activo, instrucciones y botón «Jugar».
+- [x] Selector de nivel (principiante / intermedio / avanzado) con descripción del nivel.
+- [x] Guardar el nivel en `sessionStorage` y redirigir a Juego.
+- [x] Proteger la página: si no hay usuario activo, volver al inicio de sesión.
+- [x] Definir la configuración de niveles en un solo módulo (`js/servicios/niveles.js`).
 
 ## Fase 3 · Juego: estructura y tablero (Ejercicio 3, parte 1)
 - [ ] `juego.html` con zona de información (tiempo, puntos, nivel) y zona de juego.
