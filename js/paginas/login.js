@@ -39,6 +39,13 @@ function validarFormulario(evento) {
     }
 
     const usuarios = obtenerUsuarios();
+
+    // Pasa si el fichero aún no se ha cargado o la página se abrió sin servidor web (fetch falla).
+    if (usuarios.length === 0) {
+        mostrarError('No se han podido cargar los usuarios. Abre la aplicación desde un servidor web local.');
+        return;
+    }
+
     const encontrado = usuarios.find(u => u.usuario === usuario && u['contraseña'] === contrasena);
 
     if (!encontrado) {
