@@ -1,6 +1,17 @@
 // Configuración de la partida: se define aquí una sola vez y la usan Bienvenida, Juego y Resultados.
 
 export const DURACION_PARTIDA = 30; // segundos
+export const DURACION_CONGELAR_MS = 3000;
+export const PROB_DORADO = 0.10;           // de los topos que aparecen, cuántos son dorados
+export const FACTOR_TIEMPO_DORADO = 0.7;   // el dorado se queda visible un 30 % menos
+
+// Puntos por tipo de figura golpeada; 'vacio' es pulsar un agujero sin nada.
+export const PUNTOS = {
+    'topo': 1,
+    'topo-dorado': 3,
+    'bomba': -3,
+    'vacio': -1
+};
 
 export const NIVELES = {
     principiante: {

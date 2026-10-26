@@ -124,6 +124,13 @@
 .leyenda .figura { margin-right: 6px; }
 .controles { margin: 0; }
 
+/* Las figuras asoman del agujero al aparecer */
+.agujero .figura { animation: asomar 0.12s ease-out; }
+@keyframes asomar {
+    from { transform: translateY(45%); }
+    to   { transform: translateY(0); }
+}
+
 @media (max-width: 760px) {
     .barra-info { flex-wrap: wrap; gap: 12px 20px; }
     .barra-tiempo { order: 4; flex-basis: 100%; }

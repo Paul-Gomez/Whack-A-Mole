@@ -24,3 +24,30 @@ export function crearTablero(contenedor, lado) {
 
     return agujeros;
 }
+
+export function obtenerFigura(agujero) {
+    return agujero.querySelector('.figura');
+}
+
+export function estaLibre(agujero) {
+    return obtenerFigura(agujero) === null;
+}
+
+// Devuelve 'topo', 'topo-dorado', 'bomba' o null si el agujero está vacío.
+export function tipoFigura(agujero) {
+    const figura = obtenerFigura(agujero);
+    return figura ? figura.dataset.tipo : null;
+}
+
+export function mostrarFigura(agujero, tipo) {
+    const figura = document.createElement('span');
+    figura.className = `figura ${tipo}`;
+    figura.dataset.tipo = tipo;
+    agujero.prepend(figura);
+    return figura;
+}
+
+export function quitarFigura(agujero) {
+    const figura = obtenerFigura(agujero);
+    if (figura) figura.remove();
+}

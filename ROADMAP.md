@@ -28,13 +28,13 @@ Se avanza paso a paso. Cada paso se prueba antes de pasar al siguiente. Marca co
 - [x] Leyenda y controles (zona de ayuda).
 
 ## Fase 4 · Juego: temporizador y mecánica (Ejercicio 3, parte 2)
-- [ ] Cuenta atrás de 30 s visible y barra de tiempo; al llegar a 0, ir a Resultados.
-- [ ] Aparición aleatoria de topos, topos dorados y bombas según el nivel.
-- [ ] Evento `mousedown`: golpear topo (+1), dorado (+3), bomba (−3), agujero vacío (−1).
-- [ ] Evento `contextmenu`: desactivar bombas.
-- [ ] Eventos `mouseover` / `mouseout`: resaltar agujero.
-- [ ] Evento `keydown`: congelar 3 s (una vez por partida).
-- [ ] Fin de partida por puntos objetivo (victoria) o por tiempo.
+- [x] Cuenta atrás de 30 s visible y barra de tiempo; al llegar a 0, ir a Resultados.
+- [x] Aparición aleatoria de topos, topos dorados y bombas según el nivel.
+- [x] Evento `mousedown`: golpear topo (+1), dorado (+3), bomba (−3), agujero vacío (−1).
+- [x] Evento `contextmenu`: desactivar bombas.
+- [x] Eventos `mouseover` / `mouseout`: resaltar agujero.
+- [x] Evento `keydown`: congelar 3 s (una vez por partida).
+- [x] Fin de partida por puntos objetivo (victoria) o por tiempo.
 
 ## Fase 5 · Estado de la partida (`sessionStorage`)
 - [ ] Guardar nivel, puntos, tiempo empleado, topos golpeados, bombas desactivadas y resultado.
