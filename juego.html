@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whac-A-Mole · Juego</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/juego.css">
+</head>
+<body>
+    <main class="pantalla pantalla-juego">
+
+        <section class="barra-info" aria-label="Información de la partida">
+            <div class="dato">
+                <span class="dato-etiqueta">Tiempo</span>
+                <span id="tiempo" class="dato-valor">30 s</span>
+            </div>
+            <div class="barra-tiempo" aria-hidden="true">
+                <div id="barraTiempo" class="barra-tiempo-relleno"></div>
+            </div>
+            <div class="dato dato-centro">
+                <span class="dato-etiqueta">Puntos</span>
+                <span id="puntos" class="dato-valor">0 / 0</span>
+            </div>
+            <div class="dato dato-derecha">
+                <span class="dato-etiqueta">Nivel</span>
+                <span id="nivel" class="dato-valor"></span>
+            </div>
+        </section>
+
+        <section class="tarjeta zona-juego" aria-label="Zona de juego">
+            <div id="tablero" class="tablero"></div>
+        </section>
+
+        <section class="barra-info barra-ayuda" aria-label="Ayuda">
+            <ul class="leyenda">
+                <li><span class="figura topo"></span> +1</li>
+                <li><span class="figura topo-dorado"></span> +3</li>
+                <li><span class="figura bomba"></span> −3</li>
+            </ul>
+            <p class="controles">
+                Clic derecho: desactivar bomba · Espacio: congelar
+                (<span id="estadoCongelar">disponible</span>)
+            </p>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/paginas/juego.js"></script>
+</body>
+</html>

@@ -23,9 +23,9 @@ Se avanza paso a paso. Cada paso se prueba antes de pasar al siguiente. Marca co
 - [x] Definir la configuración de niveles en un solo módulo (`js/servicios/niveles.js`).
 
 ## Fase 3 · Juego: estructura y tablero (Ejercicio 3, parte 1)
-- [ ] `juego.html` con zona de información (tiempo, puntos, nivel) y zona de juego.
-- [ ] Generación dinámica del tablero según el nivel (3×3, 4×4, 5×5).
-- [ ] Leyenda y controles (zona de ayuda).
+- [x] `juego.html` con zona de información (tiempo, puntos, nivel) y zona de juego.
+- [x] Generación dinámica del tablero según el nivel (3×3, 4×4, 5×5).
+- [x] Leyenda y controles (zona de ayuda).
 
 ## Fase 4 · Juego: temporizador y mecánica (Ejercicio 3, parte 2)
 - [ ] Cuenta atrás de 30 s visible y barra de tiempo; al llegar a 0, ir a Resultados.

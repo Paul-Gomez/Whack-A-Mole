@@ -1,0 +1,132 @@
+/* Pantalla de juego */
+.pantalla-juego {
+    max-width: 1180px;
+    margin: 0 auto;
+    gap: 20px;
+    padding-top: 28px;
+}
+
+.barra-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 28px;
+    background: var(--crema);
+    border: 3px solid var(--marron);
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dato { display: flex; flex-direction: column; min-width: 90px; }
+.dato-centro { margin: 0 auto; align-items: center; }
+.dato-derecha { align-items: flex-end; }
+.dato-etiqueta { font-size: 0.85rem; color: var(--gris-texto); }
+.dato-valor { font-size: 1.9rem; font-weight: 700; line-height: 1.1; }
+
+.barra-tiempo {
+    flex: 0 1 260px;
+    height: 22px;
+    background: #fff;
+    border: 3px solid var(--marron);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.barra-tiempo-relleno {
+    width: 100%;
+    height: 100%;
+    background: var(--verde-boton);
+}
+
+.zona-juego {
+    max-width: 780px;
+    display: flex;
+    justify-content: center;
+    padding: 28px;
+}
+
+/* Tablero: el número de columnas lo fija JavaScript con --lado */
+.tablero {
+    --lado: 3;
+    width: min(100%, 480px);
+    display: grid;
+    grid-template-columns: repeat(var(--lado), 1fr);
+    gap: 14px;
+}
+
+.agujero {
+    position: relative;
+    aspect-ratio: 1;
+    cursor: crosshair;
+}
+
+.tierra {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 55%;
+    background: #6b4a32;
+    border: 2px solid var(--marron);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.agujero.resaltado .tierra { background: #85603f; }
+
+/* Figuras: topo, topo dorado y bomba (también se usan en la leyenda) */
+.figura {
+    --cuerpo: #8b5e3c;
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    aspect-ratio: 1;
+    vertical-align: middle;
+    border: 2px solid var(--marron);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 29% 37%, #2b2b2b 0 7%, transparent 8%),
+        radial-gradient(circle at 71% 37%, #2b2b2b 0 7%, transparent 8%),
+        radial-gradient(ellipse 12% 9% at 50% 56%, #f4a6b0 95%, transparent 100%),
+        var(--cuerpo);
+}
+.figura.topo-dorado { --cuerpo: #f5c242; }
+.figura.bomba { background: #2b2b2b; }
+.figura.bomba::after {
+    content: "";
+    position: absolute;
+    top: -22%;
+    left: 44%;
+    width: 14%;
+    height: 14%;
+    background: var(--rojo);
+    border-radius: 50%;
+}
+
+.agujero .figura {
+    position: absolute;
+    left: 12%;
+    bottom: 28%;
+    width: 76%;
+    z-index: 0;
+}
+
+.barra-ayuda { justify-content: space-between; }
+.leyenda {
+    display: flex;
+    gap: 36px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.leyenda .figura { margin-right: 6px; }
+.controles { margin: 0; }
+
+@media (max-width: 760px) {
+    .barra-info { flex-wrap: wrap; gap: 12px 20px; }
+    .barra-tiempo { order: 4; flex-basis: 100%; }
+    .barra-ayuda { flex-direction: column; align-items: flex-start; }
+    .leyenda { gap: 20px; }
+}
