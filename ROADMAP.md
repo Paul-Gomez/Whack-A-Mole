@@ -41,8 +41,8 @@ Se avanza paso a paso. Cada paso se prueba antes de pasar al siguiente. Marca co
 - [x] Redirigir a Resultados al terminar.
 
 ## Fase 6 · Resultados (Ejercicio 4)
-- [ ] `resultados.html` con ganado / perdido / tiempo agotado y resumen.
-- [ ] «Jugar de nuevo» → Bienvenida. «Salir» → Inicio de sesión (limpiando la sesión).
+- [x] `resultados.html` con ganado / perdido / tiempo agotado y resumen.
+- [x] «Jugar de nuevo» → Bienvenida. «Salir» → Inicio de sesión (limpiando la sesión).
 
 ## Fase 7 · Pulido y entrega
 - [ ] Mejora de la interfaz (hasta 1,5 puntos): coherencia entre pantallas, legibilidad, detalles.

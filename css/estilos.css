@@ -165,3 +165,32 @@ select:focus { outline: 3px solid var(--verde-boton); outline-offset: 1px; }
     text-align: center;
     color: var(--gris-texto);
 }
+
+/* Resultados */
+.tarjeta-resultado { max-width: 560px; text-align: center; }
+.tarjeta-resultado h2 { font-size: 2.5rem; margin-bottom: 6px; }
+.tarjeta-resultado h2.victoria { color: var(--verde-oscuro); }
+.tarjeta-resultado h2.derrota { color: var(--rojo); }
+
+.motivo-resultado { margin: 0 0 20px; color: var(--gris-texto); }
+
+.resumen {
+    margin: 0 auto 26px;
+    padding: 20px 28px;
+    max-width: 440px;
+    list-style: none;
+    text-align: left;
+    font-size: 1.35rem;
+    line-height: 2;
+    background: #fff;
+    border: 3px solid var(--marron);
+    border-radius: 16px;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.botones .boton { margin: 0; }
