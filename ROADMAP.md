@@ -37,8 +37,8 @@ Se avanza paso a paso. Cada paso se prueba antes de pasar al siguiente. Marca co
 - [x] Fin de partida por puntos objetivo (victoria) o por tiempo.
 
 ## Fase 5 · Estado de la partida (`sessionStorage`)
-- [ ] Guardar nivel, puntos, tiempo empleado, topos golpeados, bombas desactivadas y resultado.
-- [ ] Redirigir a Resultados al terminar.
+- [x] Guardar nivel, puntos, tiempo empleado, topos golpeados, bombas desactivadas y resultado.
+- [x] Redirigir a Resultados al terminar.
 
 ## Fase 6 · Resultados (Ejercicio 4)
 - [ ] `resultados.html` con ganado / perdido / tiempo agotado y resumen.

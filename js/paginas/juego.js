@@ -1,4 +1,4 @@
-import { obtenerUsuarioActivo, obtenerNivel } from '../servicios/almacen.js';
+import { obtenerUsuarioActivo, obtenerNivel, guardarPartida } from '../servicios/almacen.js';
 import { NIVELES, DURACION_PARTIDA, DURACION_CONGELAR_MS } from '../servicios/niveles.js';
 import { crearPartida, golpear, desactivarBomba, haGanado } from '../servicios/partida.js';
 import { crearTablero, tipoFigura, quitarFigura } from '../componentes/tablero.js';
@@ -43,18 +43,29 @@ function iniciarJuego(nivel) {
         const restante = DURACION_PARTIDA - (performance.now() - inicio) / 1000;
         if (restante <= 0) {
             mostrarTiempo(0);
-            terminar('tiempo');
+            terminar('derrota');
         } else {
             mostrarTiempo(restante);
         }
     }
 
-    function terminar(motivo) {
+    // resultado: 'victoria' (objetivo alcanzado) o 'derrota' (se agotó el tiempo).
+    function terminar(resultado) {
         if (terminada) return;
         terminada = true;
         generador.detener();
         clearInterval(reloj);
-        console.info('Partida terminada:', motivo, partida);
+
+        const tiempoEmpleado = Math.min(DURACION_PARTIDA, (performance.now() - inicio) / 1000);
+        guardarPartida({
+            resultado,
+            puntos: partida.puntos,
+            objetivo: partida.objetivo,
+            tiempoEmpleado: Math.round(tiempoEmpleado),
+            tiempoRestante: Math.round(DURACION_PARTIDA - tiempoEmpleado),
+            toposGolpeados: partida.toposGolpeados,
+            bombasDesactivadas: partida.bombasDesactivadas
+        });
         window.location.href = PAGINA_RESULTADOS;
     }
 
@@ -70,6 +81,7 @@ function iniciarJuego(nivel) {
         mostrarPuntos();
 
         if (haGanado(partida)) terminar('victoria');
+
     }
 
     // contextmenu (clic derecho): desactivar una bomba, sin penalización.
