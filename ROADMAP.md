@@ -6,7 +6,7 @@ Se avanza paso a paso. Cada paso se prueba antes de pasar al siguiente. Marca co
 - [x] Estructura de carpetas (`css/`, `data/`, `js/servicios`, `js/utilidades`, `js/paginas`).
 - [x] `usuarios.json` y `cargar-datos.js` (sin modificar) copiados de los recursos.
 - [x] Hoja de estilos compartida (`css/estilos.css`) con la paleta de los wireframes.
-- [ ] Decidir/confirmar la arquitectura de la UD anterior y con el profesor el formato de entrega.
+- [x] Arquitectura por capas: páginas, componentes, servicios y utilidades.
 
 ## Fase 1 · Inicio de sesión (Ejercicio 1)
 - [x] Formulario Usuario / Contraseña / Enviar (`index.html`).
@@ -48,4 +48,4 @@ Se avanza paso a paso. Cada paso se prueba antes de pasar al siguiente. Marca co
 - [x] Mejora de la interfaz (hasta 1,5 puntos): coherencia entre pantallas, legibilidad, detalles.
 - [x] Revisar que no hay código muerto ni valores repetidos; comentarios mínimos y claros.
 - [x] Probar el recorrido completo en el navegador (login → bienvenida → juego → resultados, en los 3 niveles).
-- [ ] Preparar la entrega según indique el profesor.
+- [x] Entrega: enlace al repositorio de GitHub.
