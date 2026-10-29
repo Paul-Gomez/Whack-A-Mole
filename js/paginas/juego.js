@@ -81,7 +81,6 @@ function iniciarJuego(nivel) {
         mostrarPuntos();
 
         if (haGanado(partida)) terminar('victoria');
-
     }
 
     // contextmenu (clic derecho): desactivar una bomba, sin penalización.
